@@ -1,0 +1,43 @@
+{
+  "name": "flow-event-listener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MaxStalker/flow-event-listener.git",
+  "author": "Max Daunarovich <max.daunarovich@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@onflow/fcl": "^0.0.53",
+    "@onflow/sdk": "^0.0.31",
+    "@onflow/types": "^0.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev:emulator:local": "flow emulator start",
+    "dev:emulator": "docker run -p 3570:3569 -p 8080:8080 -e FLOW_VERBOSE=true -e FLOW_PORT=3570 -e FLOW_HTTPPORT=8080 -e FLOW_SERVICEPRIVATEKEY=5e967c6c6370b4b243d107794f6096cc346415142eacb72ed64ccfee4e4ae8f5 gcr.io/dl-flow/emulator",
+    "dev:wallet": "set PK=15b7ed2bf32c8c5d8892c54a70cebbfe468d116c4bd999cdbf46869a55346d82 && fcl-wallet"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^2.1.1"
+  }
+}
